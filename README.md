@@ -195,9 +195,9 @@ class _MainAppState extends State<MainApp> {
 We welcome contributions! If you'd like to improve the package or fix issues:
 
 1. Fork the repository.
-2. Create a new branch: git checkout -b feature-name.
-3. Commit your changes: git commit -m 'Add feature-name'.
-4. Push to the branch: git push origin feature-name.
+2. Create a new branch: `git checkout -b feature-name`.
+3. Commit your changes: `git commit -m 'Add feature-name'`.
+4. Push to the branch: `git push origin feature-name`.
 5. Open a Pull Request.
 
 ## License 📝
