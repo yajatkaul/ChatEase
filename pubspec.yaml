@@ -20,3 +20,4 @@ dev_dependencies:
   voice_message_package: ^2.2.1
   wechat_assets_picker: ^9.4.2
   flutter_chat_bubble: ^2.0.2
+  image_picker: ^1.1.2

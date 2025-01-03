@@ -16,6 +16,7 @@ dependencies:
   flutter_chat_bubble:
   video_player:
   voice_message_package:
+  image_picker:
 
 dev_dependencies:
   flutter_test:

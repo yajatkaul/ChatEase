@@ -7,53 +7,33 @@ import 'package:chatview/message_components/vm_message_bubbles.dart';
 import 'package:flutter/material.dart';
 import 'package:wechat_assets_picker/wechat_assets_picker.dart';
 import 'package:waveform_recorder/waveform_recorder.dart';
+import 'package:image_picker/image_picker.dart';
 
 class ChatView extends StatefulWidget {
   final String conversationId;
   final String userName;
-  final String? profilePic;
+  final String profilePic;
   final String clientId;
-  final VoidCallback? onMessageSend;
-  final VoidCallback? onAssetSend;
-  final VoidCallback? onVMSend;
-  final String defaultImage;
-  const ChatView({
-    super.key,
-    required this.conversationId,
-    required this.profilePic,
-    required this.userName,
-    required this.defaultImage,
-    required this.clientId,
-    required this.onMessageSend,
-    required this.onAssetSend,
-    required this.onVMSend,
-  });
+  final List<dynamic> messages;
+  final Function(String message)? onMessageSend;
+  final Function(List<AssetEntity> assets)? onAssetSend;
+  final Function(XFile audio)? onVMSend;
+  const ChatView(
+      {super.key,
+      required this.conversationId,
+      required this.profilePic,
+      required this.userName,
+      required this.clientId,
+      required this.onMessageSend,
+      required this.onAssetSend,
+      required this.onVMSend,
+      required this.messages});
 
   @override
   State<ChatView> createState() => _ChatViewState();
 }
 
 class _ChatViewState extends State<ChatView> {
-  List<dynamic> messages = [
-    {
-      "userId": {
-        "profilePic":
-            "https://www.shutterstock.com/image-vector/anime-boy-black-hair-hoodie-600nw-2078861473.jpg",
-        "_id": "1234"
-      },
-      "message": "Hello",
-      "type": "MESSAGE"
-    },
-    {
-      "userId": {
-        "profilePic":
-            "https://www.shutterstock.com/image-vector/anime-boy-black-hair-hoodie-600nw-2078861473.jpg",
-        "_id": "1232"
-      },
-      "message": "Hello21",
-      "type": "MESSAGE"
-    }
-  ];
   final _messageController = TextEditingController();
   final _scrollController = ScrollController();
 
@@ -78,7 +58,7 @@ class _ChatViewState extends State<ChatView> {
 
     if (result != null) {
       try {
-        widget.onAssetSend!();
+        widget.onAssetSend!(result);
       } catch (e) {
         debugPrint('Error occurred while uploading assets: $e');
       }
@@ -105,7 +85,7 @@ class _ChatViewState extends State<ChatView> {
     } else {
       final file = _waveController.file;
       if (file == null) return;
-      widget.onVMSend!();
+      widget.onVMSend!(file);
     }
   }
 
@@ -133,7 +113,7 @@ class _ChatViewState extends State<ChatView> {
           children: [
             CircleAvatar(
               backgroundImage: NetworkImage(
-                widget.profilePic ?? widget.defaultImage,
+                widget.profilePic,
               ),
               radius: 16,
             ),
@@ -149,11 +129,11 @@ class _ChatViewState extends State<ChatView> {
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: ListView(
               controller: _scrollController,
-              children: messages.map((message) {
+              children: widget.messages.map((message) {
                 if (message['type'] == "MESSAGE") {
                   if (message['userId']['_id'] == widget.clientId) {
                     return MessageSent(
-                      profilePic: message['message']['profilePic'],
+                      profilePic: message['userId']['profilePic'],
                       message: message['message'],
                     );
                   } else {
@@ -256,7 +236,7 @@ class _ChatViewState extends State<ChatView> {
                               if (_messageController.text == "") {
                                 return;
                               }
-                              widget.onMessageSend!();
+                              widget.onMessageSend!(_messageController.text);
                             },
                             icon: const Icon(Icons.send_rounded),
                             color: Colors.blue,
