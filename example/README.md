@@ -1,3 +1,0 @@
-# example
-
-Chat View

@@ -1,6 +1,6 @@
 name: chatview
 description: "Ready to use functional chat screen"
-version: 0.0.1
+version: 1.0.0
 homepage: https://github.com/yajatkaul/chatview
 
 environment:

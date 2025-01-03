@@ -237,6 +237,7 @@ class _ChatViewState extends State<ChatView> {
                                 return;
                               }
                               widget.onMessageSend!(_messageController.text);
+                              _messageController.text = "";
                             },
                             icon: const Icon(Icons.send_rounded),
                             color: Colors.blue,
