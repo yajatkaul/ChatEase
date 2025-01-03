@@ -1,10 +1,10 @@
-# ChatView: A Prebuilt Feature-Rich Chat Screen for Flutter
+# ChatEase: A Prebuilt Feature-Rich Chat Screen for Flutter
 
 [![Pub Popularity](https://img.shields.io/pub/popularity/chatview)](https://pub.dev/packages/chatview)
 [![Pub Version](https://img.shields.io/pub/v/chatview)](https://pub.dev/packages/chatview)
 [![License](https://img.shields.io/github/license/yajatkaul/chatview)](https://pub.dev/packages/chatview)
 
-**ChatView** is a Flutter package that provides a prebuilt, feature-rich chat screen designed to simplify development while offering powerful capabilities. With ChatView, you can easily integrate messaging, voice recordings, media sharing, and more into your application, ensuring a seamless and engaging user experience.
+**ChatEase** is a Flutter package that provides a prebuilt, feature-rich chat screen designed to simplify development while offering powerful capabilities. With ChatView, you can easily integrate messaging, voice recordings, media sharing, and more into your application, ensuring a seamless and engaging user experience.
 
 ## Features 🚀
 
@@ -26,7 +26,7 @@
 
    ```yaml
    dependencies:
-     chatview: ^1.0.0
+     chatease: ^1.0.0
    ```
 
 2. Fetch the dependencies:
@@ -71,7 +71,7 @@ Ensure you also enable Background Modes for audio recording if needed.
 
 1. Import the package:
    ```dart
-   import 'package:chatview/chatview.dart';
+   import 'package:chatease/chatview.dart';
    ```
 2. Use the ChatView widget in your application:
    ```dart
@@ -99,7 +99,7 @@ Ensure you also enable Background Modes for audio recording if needed.
 ## Example 🥼
 
 ```dart
-import 'package:chatview/chatview.dart';
+import 'package:chatease/chatview.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -181,7 +181,7 @@ class _MainAppState extends State<MainApp> {
 
 ## Dependencies 🛠️
 
-### ChatView leverages the following packages to provide its rich feature set:
+### ChatEase leverages the following packages to provide its rich feature set:
 
 - [video_player](https://pub.dev/packages/video_player): For playing video messages.
 - [waveform_recorder](https://pub.dev/packages/waveform_recorder): For recording voice messages.
@@ -203,4 +203,4 @@ We welcome contributions! If you'd like to improve the package or fix issues:
 ## License 📝
 
 <p>This project is licensed under the MIT License.</p>
-<p>Happy coding with ChatView! 🎉</p>
+<p>Happy coding with ChatEase! 🎉</p>

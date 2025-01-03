@@ -1,9 +1,9 @@
 import 'dart:async';
 
-import 'package:chatview/message_components/image_message_bubble.dart';
-import 'package:chatview/message_components/message_bubbles.dart';
-import 'package:chatview/message_components/video_message_bubble.dart';
-import 'package:chatview/message_components/vm_message_bubbles.dart';
+import 'package:chatease/message_components/image_message_bubble.dart';
+import 'package:chatease/message_components/message_bubbles.dart';
+import 'package:chatease/message_components/video_message_bubble.dart';
+import 'package:chatease/message_components/vm_message_bubbles.dart';
 import 'package:flutter/material.dart';
 import 'package:wechat_assets_picker/wechat_assets_picker.dart';
 import 'package:waveform_recorder/waveform_recorder.dart';

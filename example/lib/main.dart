@@ -1,4 +1,4 @@
-import 'package:chatview/chatview.dart';
+import 'package:chatease/chatview.dart';
 import 'package:flutter/material.dart';
 
 void main() {
