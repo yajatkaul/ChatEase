@@ -1,0 +1,22 @@
+name: chatview
+description: "Ready to use functional chat screen"
+version: 0.0.1
+homepage: https://github.com/yajatkaul/chatview
+
+environment:
+  sdk: ^3.6.0
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  video_player: ^2.9.2
+  waveform_recorder: ^1.4.0
+  voice_message_package: ^2.2.1
+  wechat_assets_picker: ^9.4.2
+  flutter_chat_bubble: ^2.0.2
