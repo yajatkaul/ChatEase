@@ -1,14 +1,14 @@
 # ChatEase: A Prebuilt Feature-Rich Chat Screen for Flutter
 
-[![Pub Popularity](https://img.shields.io/pub/popularity/chatview)](https://pub.dev/packages/chatview)
-[![Pub Version](https://img.shields.io/pub/v/chatview)](https://pub.dev/packages/chatview)
-[![License](https://img.shields.io/github/license/yajatkaul/chatview)](https://pub.dev/packages/chatview)
+[![Pub Popularity](https://img.shields.io/pub/popularity/chatease)](https://pub.dev/packages/chatease)
+[![Pub Version](https://img.shields.io/pub/v/chatease)](https://pub.dev/packages/chatease)
+[![License](https://img.shields.io/github/license/yajatkaul/chatease)](https://pub.dev/packages/chatease)
 
 **ChatEase** is a Flutter package that provides a prebuilt, feature-rich chat screen designed to simplify development while offering powerful capabilities. With ChatView, you can easily integrate messaging, voice recordings, media sharing, and more into your application, ensuring a seamless and engaging user experience.
 
 ## Features 🚀
 
-[![Pub Points](https://img.shields.io/pub/points/chatview)](https://pub.dev/packages/chatview)
+[![Pub Points](https://img.shields.io/pub/points/chatease)](https://pub.dev/packages/chatease)
 
 - **Rich Messaging**: Send and receive text messages effortlessly.
 - **Voice Messaging**: Record and send voice messages with an interactive waveform visualization.
