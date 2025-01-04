@@ -18,8 +18,7 @@ class _VideoSentState extends State<VideoSent> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.networkUrl(
-        Uri.parse(widget.video))
+    _controller = VideoPlayerController.networkUrl(Uri.parse(widget.video))
       ..initialize().then((_) {
         setState(() {});
       });
@@ -79,8 +78,8 @@ class _VideoSentState extends State<VideoSent> {
           ClipRRect(
             borderRadius: BorderRadius.circular(100),
             child: SizedBox(
-              height: 50,
-              width: 50,
+              width: 40,
+              height: 40,
               child: Image.network(
                 widget.profilePic,
                 width: 40,
@@ -110,8 +109,7 @@ class _VideoRecievedState extends State<VideoRecieved> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.networkUrl(
-        Uri.parse(widget.profilePic))
+    _controller = VideoPlayerController.networkUrl(Uri.parse(widget.profilePic))
       ..initialize().then((_) {
         setState(() {});
       });
@@ -143,8 +141,8 @@ class _VideoRecievedState extends State<VideoRecieved> {
           ClipRRect(
               borderRadius: BorderRadius.circular(100),
               child: SizedBox(
-                height: 50,
-                width: 50,
+                width: 40,
+                height: 40,
                 child: Image.network(
                   widget.profilePic,
                   width: 40,

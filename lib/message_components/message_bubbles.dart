@@ -31,8 +31,8 @@ class MessageSent extends StatelessWidget {
         ClipRRect(
             borderRadius: BorderRadius.circular(100),
             child: SizedBox(
-              height: 50,
-              width: 50,
+              width: 40,
+              height: 40,
               child: Image.network(
                 profilePic,
                 width: 40,
@@ -60,8 +60,8 @@ class MessageReceived extends StatelessWidget {
         ClipRRect(
             borderRadius: BorderRadius.circular(100),
             child: SizedBox(
-              height: 50,
-              width: 50,
+              width: 40,
+              height: 40,
               child: Image.network(
                 profilePic,
                 width: 40,

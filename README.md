@@ -18,7 +18,7 @@
 
 ## Demo 🎥
 
-<img src="https://github.com/user-attachments/assets/d861d563-04d6-4d2d-ba69-cf2320bd5c9e" alt="Demo" width="300" />
+<img src="https://github.com/user-attachments/assets/d9cb7444-32c9-4286-8554-5c1c22809148" alt="Demo" width="300" />
 
 ## Installation 🔧
 
