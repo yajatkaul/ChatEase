@@ -40,8 +40,6 @@ class _ChatViewState extends State<ChatView> {
   @override
   void didChangeDependencies() async {
     super.didChangeDependencies();
-    //messages = await ChatHooks().getMessages(context, widget.conversationId);
-    setState(() {});
     _scrollToBottom();
   }
 
@@ -184,7 +182,7 @@ class _ChatViewState extends State<ChatView> {
             ),
           )),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 8),
+            padding: const EdgeInsets.symmetric(vertical: 1.0, horizontal: 8),
             child: _waveController.isRecording
                 ? Container(
                     decoration: BoxDecoration(
