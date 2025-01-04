@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:voice_message_package/voice_message_package.dart';
 
+/// Component for voice messages sent in chat
 class VMSent extends StatelessWidget {
+  /// url of voice message
   final String vm;
+
+  /// url of profile picture of user
   final String profilePic;
+
+  /// required for component
   const VMSent({super.key, required this.vm, required this.profilePic});
 
   @override
@@ -62,9 +68,15 @@ class VMSent extends StatelessWidget {
   }
 }
 
+/// Component for voice messages recieved in chat
 class VMRecieved extends StatelessWidget {
+  /// url of voice message
   final String vm;
+
+  /// url of profile picture of user
   final String profilePic;
+
+  /// required for component
   const VMRecieved({super.key, required this.vm, required this.profilePic});
 
   @override

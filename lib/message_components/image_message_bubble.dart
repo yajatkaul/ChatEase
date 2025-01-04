@@ -3,9 +3,15 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+/// Component for images sent in chat
 class ImageSent extends StatelessWidget {
+  /// url of image sent
   final String image;
+
+  /// url of profile picture of user
   final String profilePic;
+
+  /// required for component
   const ImageSent({super.key, required this.image, required this.profilePic});
 
   void _showFullscreenImage(BuildContext context) {
@@ -59,9 +65,15 @@ class ImageSent extends StatelessWidget {
   }
 }
 
+/// Component for images received in chat
 class ImageReceived extends StatelessWidget {
+  /// url of image sent
   final String image;
+
+  /// url of profile picture of user
   final String profilePic;
+
+  /// required for component
   const ImageReceived(
       {super.key, required this.image, required this.profilePic});
 
@@ -116,9 +128,12 @@ class ImageReceived extends StatelessWidget {
   }
 }
 
+/// Full screen view of image
 class FullscreenImageViewer extends StatefulWidget {
+  /// image url
   final String imageUrl;
 
+  /// required for component
   const FullscreenImageViewer({
     super.key,
     required this.imageUrl,

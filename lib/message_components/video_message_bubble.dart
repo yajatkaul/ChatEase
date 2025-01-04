@@ -3,9 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:video_player/video_player.dart';
 
+/// Component for videos sent in chat
 class VideoSent extends StatefulWidget {
+  /// url of video
   final String video;
+
+  /// url of profile picture of user
   final String profilePic;
+
+  /// required for component
   const VideoSent({super.key, required this.video, required this.profilePic});
 
   @override
@@ -94,9 +100,15 @@ class _VideoSentState extends State<VideoSent> {
   }
 }
 
+/// Component for videos recieved in chat
 class VideoRecieved extends StatefulWidget {
+  /// url of video of user
   final String video;
+
+  /// url of profile picture of user
   final String profilePic;
+
+  /// required for component
   const VideoRecieved(
       {super.key, required this.video, required this.profilePic});
 
@@ -188,9 +200,12 @@ class _VideoRecievedState extends State<VideoRecieved> {
   }
 }
 
+/// Full screen view of video
 class VideoFullscreenPage extends StatefulWidget {
+  /// video player controller
   final VideoPlayerController controller;
 
+  /// required for component
   const VideoFullscreenPage({
     super.key,
     required this.controller,

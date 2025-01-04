@@ -1,9 +1,15 @@
 import 'package:flutter_chat_bubble/chat_bubble.dart';
 import 'package:flutter/material.dart';
 
+/// Component for messages sent in chat
 class MessageSent extends StatelessWidget {
+  /// message sent
   final String message;
+
+  /// url of profile picture of user
   final String profilePic;
+
+  /// required for component
   const MessageSent(
       {super.key, required this.message, required this.profilePic});
 
@@ -45,9 +51,15 @@ class MessageSent extends StatelessWidget {
   }
 }
 
+/// Component for messages received in chat
 class MessageReceived extends StatelessWidget {
+  /// message received
   final String message;
+
+  /// url of profile picture of user
   final String profilePic;
+
+  /// required for component
   const MessageReceived(
       {super.key, required this.message, required this.profilePic});
 

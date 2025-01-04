@@ -9,15 +9,33 @@ import 'package:wechat_assets_picker/wechat_assets_picker.dart';
 import 'package:waveform_recorder/waveform_recorder.dart';
 import 'package:image_picker/image_picker.dart';
 
+/// Main merged chat view component
 class ChatView extends StatefulWidget {
+  /// unique identifier for conversation
   final String conversationId;
+
+  /// other persons username
   final String userName;
+
+  /// other persons profile picture
   final String profilePic;
+
+  /// current users id
   final String clientId;
+
+  /// list of messages in the conversation
   final List<dynamic> messages;
+
+  /// call back function on message sent
   final Function(String message)? onMessageSend;
+
+  /// call back function on asset sent
   final Function(List<AssetEntity> assets)? onAssetSend;
+
+  /// call back function on voice message sent
   final Function(XFile audio)? onVMSend;
+
+  /// Required chatview
   const ChatView(
       {super.key,
       required this.conversationId,
