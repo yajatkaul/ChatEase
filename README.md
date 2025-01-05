@@ -26,7 +26,7 @@
 
    ```yaml
    dependencies:
-     chatease: ^1.0.0
+     chatease: ^latest
    ```
 
 2. Fetch the dependencies:
