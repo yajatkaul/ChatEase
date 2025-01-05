@@ -1,3 +1,7 @@
+## 1.0.3
+
+- Doc Changes
+
 ## 1.0.2
 
 - Linter changes

@@ -1,6 +1,6 @@
 name: chatease
 description: "Flutter package that provides a prebuilt, feature-rich chat screen designed to simplify development while offering powerful capabilities"
-version: 1.0.2
+version: 1.0.3
 homepage: https://github.com/yajatkaul/ChatEase
 
 environment:
