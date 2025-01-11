@@ -1,3 +1,7 @@
+## 1.1.0
+
+- UI Fixes
+
 ## 1.0.3
 
 - Doc Changes
