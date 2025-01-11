@@ -33,15 +33,19 @@ class ImageSent extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          GestureDetector(
-            onTap: () => _showFullscreenImage(context),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(25),
-              child: Container(
-                constraints: BoxConstraints(
-                  maxWidth: MediaQuery.of(context).size.width * 0.7,
+          SizedBox(
+            height: 200,
+            width: 200,
+            child: GestureDetector(
+              onTap: () => _showFullscreenImage(context),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(25),
+                child: Container(
+                  constraints: BoxConstraints(
+                    maxWidth: MediaQuery.of(context).size.width * 0.7,
+                  ),
+                  child: Image(image: NetworkImage(image)),
                 ),
-                child: Image(image: NetworkImage(image)),
               ),
             ),
           ),
@@ -110,15 +114,22 @@ class ImageReceived extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 10),
-          GestureDetector(
-            onTap: () => _showFullscreenImage(context),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(25),
-              child: Container(
-                constraints: BoxConstraints(
-                  maxWidth: MediaQuery.of(context).size.width * 0.7,
+          SizedBox(
+            height: 200,
+            width: 200,
+            child: GestureDetector(
+              onTap: () => _showFullscreenImage(context),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(25),
+                child: Container(
+                  constraints: BoxConstraints(
+                    maxWidth: MediaQuery.of(context).size.width * 0.7,
+                  ),
+                  child: Image(
+                    image: NetworkImage(image),
+                    fit: BoxFit.cover,
+                  ),
                 ),
-                child: Image(image: NetworkImage(image)),
               ),
             ),
           ),

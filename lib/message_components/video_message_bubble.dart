@@ -56,24 +56,34 @@ class _VideoSentState extends State<VideoSent> {
           ClipRRect(
             borderRadius: BorderRadius.circular(25),
             child: Container(
+              width: 200,
+              height: 200,
               constraints: BoxConstraints(
                 maxWidth: MediaQuery.of(context).size.width * 0.7,
               ),
               child: _controller.value.isInitialized
-                  ? AspectRatio(
-                      aspectRatio: _controller.value.aspectRatio,
-                      child: GestureDetector(
-                        onTap: _showVideoOverlay,
-                        child: Stack(
-                          alignment: Alignment.center,
-                          children: [
-                            VideoPlayer(_controller),
-                            Icon(
-                              Icons.play_circle_outline,
-                              size: 50,
-                              color: Colors.white.withValues(),
+                  ? SizedBox(
+                      width: 200,
+                      height: 200,
+                      child: AspectRatio(
+                        aspectRatio: _controller.value.aspectRatio,
+                        child: SizedBox(
+                          height: 200,
+                          width: 200,
+                          child: GestureDetector(
+                            onTap: _showVideoOverlay,
+                            child: Stack(
+                              alignment: Alignment.center,
+                              children: [
+                                VideoPlayer(_controller),
+                                Icon(
+                                  Icons.play_circle_outline,
+                                  size: 50,
+                                  color: Colors.white.withValues(),
+                                ),
+                              ],
                             ),
-                          ],
+                          ),
                         ),
                       ),
                     )
@@ -121,7 +131,7 @@ class _VideoRecievedState extends State<VideoRecieved> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.networkUrl(Uri.parse(widget.profilePic))
+    _controller = VideoPlayerController.networkUrl(Uri.parse(widget.video))
       ..initialize().then((_) {
         setState(() {});
       });
@@ -168,26 +178,30 @@ class _VideoRecievedState extends State<VideoRecieved> {
           ClipRRect(
             borderRadius: BorderRadius.circular(25),
             child: Container(
+              width: 200,
+              height: 200,
               constraints: BoxConstraints(
                 maxWidth: MediaQuery.of(context).size.width * 0.7,
               ),
               child: _controller.value.isInitialized
-                  ? AspectRatio(
-                      aspectRatio: _controller.value.aspectRatio,
-                      child: GestureDetector(
-                        onTap: () {
-                          _showVideoOverlay();
-                        },
-                        child: Stack(
-                          alignment: Alignment.center,
-                          children: [
-                            VideoPlayer(_controller),
-                            Icon(
-                              Icons.play_circle_outline,
-                              size: 50,
-                              color: Colors.white.withValues(),
-                            ),
-                          ],
+                  ? SizedBox(
+                      width: 200,
+                      height: 200,
+                      child: AspectRatio(
+                        aspectRatio: _controller.value.aspectRatio,
+                        child: GestureDetector(
+                          onTap: _showVideoOverlay,
+                          child: Stack(
+                            alignment: Alignment.center,
+                            children: [
+                              VideoPlayer(_controller),
+                              Icon(
+                                Icons.play_circle_outline,
+                                size: 50,
+                                color: Colors.white.withValues(),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     )

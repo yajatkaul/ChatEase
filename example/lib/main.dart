@@ -29,8 +29,9 @@ class _MainAppState extends State<MainApp> {
             "https://www.shutterstock.com/image-vector/anime-boy-black-hair-hoodie-600nw-2078861473.jpg",
         "_id": "1234"
       },
-      "message": "Free today?",
-      "type": "MESSAGE"
+      "message":
+          "https://i.pinimg.com/originals/a8/2c/4b/a82c4b062593c35f4ebcf1617e83cacd.png",
+      "type": "IMAGE"
     },
     {
       "userId": {
@@ -38,9 +39,37 @@ class _MainAppState extends State<MainApp> {
             "https://www.shutterstock.com/image-vector/anime-boy-black-hair-hoodie-600nw-2078861473.jpg",
         "_id": "1234"
       },
-      "message": "Let's hang out",
+      "message":
+          "https://videos.pexels.com/video-files/4830364/4830364-uhd_1440_2732_25fps.mp4",
+      "type": "VIDEO"
+    },
+    {
+      "userId": {
+        "profilePic":
+            "https://www.shutterstock.com/image-vector/anime-boy-black-hair-hoodie-600nw-2078861473.jpg",
+        "_id": "1235"
+      },
+      "message": "Sure",
       "type": "MESSAGE"
     },
+    {
+      "userId": {
+        "profilePic":
+            "https://www.shutterstock.com/image-vector/anime-boy-black-hair-hoodie-600nw-2078861473.jpg",
+        "_id": "1235"
+      },
+      "message": "Sure",
+      "type": "MESSAGE"
+    },
+    {
+      "userId": {
+        "profilePic":
+            "https://www.shutterstock.com/image-vector/anime-boy-black-hair-hoodie-600nw-2078861473.jpg",
+        "_id": "1235"
+      },
+      "message": "Sure",
+      "type": "MESSAGE"
+    }
   ];
 
   Map<String, Object> newMessage = {
