@@ -1,5 +1,6 @@
 import 'package:flutter_chat_bubble/chat_bubble.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 
 /// Component for messages sent in chat
 class MessageSent extends StatelessWidget {
@@ -28,9 +29,14 @@ class MessageSent extends StatelessWidget {
             constraints: BoxConstraints(
               maxWidth: MediaQuery.of(context).size.width * 0.7,
             ),
-            child: Text(
-              message,
-              style: const TextStyle(color: Colors.white),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 5),
+              child: MarkdownBody(
+                data: message,
+                styleSheet: MarkdownStyleSheet(
+                  p: const TextStyle(color: Colors.white),
+                ),
+              ),
             ),
           ),
         ),
@@ -89,9 +95,11 @@ class MessageReceived extends StatelessWidget {
             constraints: BoxConstraints(
               maxWidth: MediaQuery.of(context).size.width * 0.7,
             ),
-            child: Text(
-              message,
-              style: const TextStyle(color: Colors.black),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 5),
+              child: MarkdownBody(
+                data: message,
+              ),
             ),
           ),
         ),

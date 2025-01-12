@@ -14,11 +14,11 @@ class ChatView extends StatefulWidget {
   /// unique identifier for conversation
   final String conversationId;
 
-  /// other persons username
-  final String userName;
+  /// chat name
+  final String name;
 
-  /// other persons profile picture
-  final String profilePic;
+  /// chat profile image
+  final String image;
 
   /// current users id
   final String clientId;
@@ -35,17 +35,21 @@ class ChatView extends StatefulWidget {
   /// call back function on voice message sent
   final Function(XFile audio)? onVMSend;
 
+  /// customizing scrolling style
+  final ScrollController? scrollController;
+
   /// Required chatview
   const ChatView(
       {super.key,
       required this.conversationId,
-      required this.profilePic,
-      required this.userName,
+      required this.image,
+      required this.name,
       required this.clientId,
       required this.onMessageSend,
       required this.onAssetSend,
       required this.onVMSend,
-      required this.messages});
+      required this.messages,
+      this.scrollController});
 
   @override
   State<ChatView> createState() => _ChatViewState();
@@ -53,19 +57,12 @@ class ChatView extends StatefulWidget {
 
 class _ChatViewState extends State<ChatView> {
   final _messageController = TextEditingController();
-  final _scrollController = ScrollController();
-
-  @override
-  void didChangeDependencies() async {
-    super.didChangeDependencies();
-    _scrollToBottom();
-  }
 
   @override
   void dispose() {
     _messageController.dispose();
     _waveController.dispose();
-    _scrollController.dispose();
+    widget.scrollController?.dispose();
     super.dispose();
   }
 
@@ -113,14 +110,6 @@ class _ChatViewState extends State<ChatView> {
     setState(() {});
   }
 
-  void _scrollToBottom() {
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (_scrollController.hasClients) {
-        _scrollController.jumpTo(_scrollController.position.maxScrollExtent);
-      }
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -129,12 +118,12 @@ class _ChatViewState extends State<ChatView> {
           children: [
             CircleAvatar(
               backgroundImage: NetworkImage(
-                widget.profilePic,
+                widget.image,
               ),
               radius: 16,
             ),
             const SizedBox(width: 8),
-            Text(widget.userName),
+            Text(widget.name),
           ],
         ),
       ),
@@ -144,7 +133,7 @@ class _ChatViewState extends State<ChatView> {
               child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: ListView(
-              controller: _scrollController,
+              controller: widget.scrollController,
               children: widget.messages.map((message) {
                 if (message['type'] == "MESSAGE") {
                   if (message['userId']['_id'] == widget.clientId) {

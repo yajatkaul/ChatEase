@@ -64,17 +64,20 @@ class _MainAppState extends State<MainApp> {
     "type": "MESSAGE"
   };
 
+  final ScrollController _scrollController = ScrollController();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
           body: ChatView(
+              scrollController: _scrollController,
               messages: conversation,
               conversationId: "1",
-              profilePic:
+              image:
                   "https://www.shutterstock.com/image-vector/anime-boy-black-hair-hoodie-600nw-2078861473.jpg",
-              userName: "Adam",
+              name: "Adam",
               clientId: "1235",
               onMessageSend: (message) {
                 debugPrint(message);

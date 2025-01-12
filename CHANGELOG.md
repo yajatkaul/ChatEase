@@ -1,3 +1,7 @@
+## 1.1.1
+
+- Added markdown support
+
 ## 1.1.0
 
 - UI Fixes
