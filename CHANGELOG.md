@@ -1,3 +1,9 @@
+## 1.2.1
+
+- Added link embed support
+- Fixed full screen bug
+- Added multiple lines support
+
 ## 1.1.1
 
 - Added markdown support

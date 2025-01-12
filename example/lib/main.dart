@@ -20,7 +20,7 @@ class _MainAppState extends State<MainApp> {
             "https://www.shutterstock.com/image-vector/anime-boy-black-hair-hoodie-600nw-2078861473.jpg",
         "_id": "1234"
       },
-      "message": "Hello",
+      "message": "https://www.chatgpt.com",
       "type": "MESSAGE"
     },
     {

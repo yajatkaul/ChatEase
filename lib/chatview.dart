@@ -216,6 +216,8 @@ class _ChatViewState extends State<ChatView> {
                     ),
                   )
                 : TextField(
+                    minLines: 1,
+                    maxLines: 5,
                     controller: _messageController,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(

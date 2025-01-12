@@ -130,17 +130,28 @@ class _MainAppState extends State<MainApp> {
             "https://www.shutterstock.com/image-vector/anime-boy-black-hair-hoodie-600nw-2078861473.jpg",
         "_id": "1234"
       },
-      "message": "Free today?",
-      "type": "MESSAGE"
+      "message":
+          "https://i.pinimg.com/originals/a8/2c/4b/a82c4b062593c35f4ebcf1617e83cacd.png",
+      "type": "IMAGE"
     },
+    // {
+    //   "userId": {
+    //     "profilePic":
+    //         "https://www.shutterstock.com/image-vector/anime-boy-black-hair-hoodie-600nw-2078861473.jpg",
+    //     "_id": "1234"
+    //   },
+    //   "message":
+    //       "https://videos.pexels.com/video-files/4830364/4830364-uhd_1440_2732_25fps.mp4",
+    //   "type": "VIDEO"
+    // },
     {
       "userId": {
         "profilePic":
             "https://www.shutterstock.com/image-vector/anime-boy-black-hair-hoodie-600nw-2078861473.jpg",
         "_id": "1234"
       },
-      "message": "Let's hang out",
-      "type": "MESSAGE"
+      "message": "https://download.samplelib.com/mp3/sample-3s.mp3",
+      "type": "VOICE"
     },
   ];
 
@@ -154,17 +165,20 @@ class _MainAppState extends State<MainApp> {
     "type": "MESSAGE"
   };
 
+  final ScrollController _scrollController = ScrollController();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
           body: ChatView(
+              scrollController: _scrollController,
               messages: conversation,
               conversationId: "1",
-              profilePic:
+              image:
                   "https://www.shutterstock.com/image-vector/anime-boy-black-hair-hoodie-600nw-2078861473.jpg",
-              userName: "Adam",
+              name: "Adam",
               clientId: "1235",
               onMessageSend: (message) {
                 debugPrint(message);

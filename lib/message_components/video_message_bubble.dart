@@ -239,7 +239,7 @@ class _VideoFullscreenPageState extends State<VideoFullscreenPage> {
     super.initState();
     _startHideControlsTimer();
     // Enable full screen
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
+    //SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
   }
 
   @override
@@ -248,7 +248,7 @@ class _VideoFullscreenPageState extends State<VideoFullscreenPage> {
     // Reset to portrait orientation when leaving fullscreen
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     // Restore system UI
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+    //SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
     super.dispose();
   }
 
